@@ -1,12 +1,21 @@
 import { mockMetrics, revenueData, campaignPerformanceData, trafficSourcesData, mockCampaigns } from './mock-data';
 import { TrendingUp, TrendingDown, AlertTriangle, Target, Users, DollarSign, Zap, BarChart3 } from 'lucide-react';
 
+const TrendingUpIcon = TrendingUp as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const TrendingDownIcon = TrendingDown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const AlertTriangleIcon = AlertTriangle as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const TargetIcon = Target as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const UsersIcon = Users as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const DollarSignIcon = DollarSign as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const ZapIcon = Zap as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const BarChart3Icon = BarChart3 as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 export interface Insight {
   id: string;
   title: string;
   description: string;
   type: 'positive' | 'negative' | 'warning' | 'neutral';
-  icon: React.ComponentType;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   priority: number;
 }
 
@@ -26,7 +35,7 @@ export function generateInsights(): Insight[] {
       title: 'Strong Revenue Growth',
       description: `Revenue increased by ${revenueGrowth.toFixed(1)}% in recent months, showing excellent business momentum.`,
       type: 'positive',
-      icon: TrendingUp,
+      icon: TrendingUpIcon,
       priority: 1
     });
   } else if (revenueGrowth < -5) {
@@ -35,7 +44,7 @@ export function generateInsights(): Insight[] {
       title: 'Revenue Decline Alert',
       description: `Revenue decreased by ${Math.abs(revenueGrowth).toFixed(1)}% recently. Consider reviewing marketing strategies.`,
       type: 'negative',
-      icon: TrendingDown,
+      icon: TrendingDownIcon,
       priority: 1
     });
   }
@@ -52,7 +61,7 @@ export function generateInsights(): Insight[] {
     title: 'Top Performing Channel',
     description: `${topCampaign.name} generates ${topCampaignShare.toFixed(1)}% of total campaign revenue. Consider increasing budget allocation.`,
     type: 'positive',
-    icon: Target,
+    icon: TargetIcon,
     priority: 2
   });
 
@@ -67,7 +76,7 @@ export function generateInsights(): Insight[] {
         title: 'Strong Organic Presence',
         description: `Organic search drives ${organicTraffic.value}% of traffic vs ${paidTraffic.value}% paid. Excellent SEO performance!`,
         type: 'positive',
-        icon: Zap,
+        icon: ZapIcon,
         priority: 3
       });
     } else if (paidTraffic.value > organicTraffic.value * 1.2) {
@@ -76,7 +85,7 @@ export function generateInsights(): Insight[] {
         title: 'High Paid Traffic Dependency',
         description: `${paidTraffic.value}% of traffic is paid vs ${organicTraffic.value}% organic. Consider investing in SEO for long-term growth.`,
         type: 'warning',
-        icon: AlertTriangle,
+        icon: AlertTriangleIcon,
         priority: 2
       });
     }
@@ -96,7 +105,7 @@ export function generateInsights(): Insight[] {
         title: 'Excellent User Engagement',
         description: `Active users grew by ${userGrowth.toFixed(1)}% with improving conversion rates. User acquisition strategy is working well.`,
         type: 'positive',
-        icon: Users,
+        icon: UsersIcon,
         priority: 1
       });
     } else if (userGrowth > 10 && conversionChange < -2) {
@@ -105,7 +114,7 @@ export function generateInsights(): Insight[] {
         title: 'Conversion Rate Optimization Needed',
         description: `User growth is strong (+${userGrowth.toFixed(1)}%) but conversion rate declined. Focus on user experience improvements.`,
         type: 'warning',
-        icon: BarChart3,
+        icon: BarChart3Icon,
         priority: 2
       });
     }
@@ -121,7 +130,7 @@ export function generateInsights(): Insight[] {
       title: 'Exceptional Campaign ROI',
       description: `Active campaigns average ${avgROAS.toFixed(1)}x ROAS. Your advertising spend is highly efficient.`,
       type: 'positive',
-      icon: DollarSign,
+      icon: DollarSignIcon,
       priority: 2
     });
   } else if (avgROAS < 2) {
@@ -130,7 +139,7 @@ export function generateInsights(): Insight[] {
       title: 'Campaign Efficiency Alert',
       description: `Average ROAS is ${avgROAS.toFixed(1)}x. Consider pausing underperforming campaigns and optimizing targeting.`,
       type: 'negative',
-      icon: AlertTriangle,
+      icon: AlertTriangleIcon,
       priority: 1
     });
   }
@@ -150,7 +159,7 @@ export function getRandomInsights(): Insight[] {
       title: 'Mobile Traffic Surge',
       description: 'Mobile users increased by 23% this month. Consider optimizing mobile experience and campaigns.',
       type: 'positive',
-      icon: TrendingUp,
+      icon: TrendingUpIcon,
       priority: 3
     },
     {
@@ -158,7 +167,7 @@ export function getRandomInsights(): Insight[] {
       title: 'Weekend Performance Pattern',
       description: 'Conversions are 15% higher on weekends. Consider adjusting ad scheduling for better ROI.',
       type: 'neutral',
-      icon: BarChart3,
+      icon: BarChart3Icon,
       priority: 3
     },
     {
@@ -166,7 +175,7 @@ export function getRandomInsights(): Insight[] {
       title: 'Cost Per Acquisition Improved',
       description: 'CPA decreased by 12% while maintaining conversion quality. Excellent optimization work!',
       type: 'positive',
-      icon: DollarSign,
+      icon: DollarSignIcon,
       priority: 2
     }
   ];
