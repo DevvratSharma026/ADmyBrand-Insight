@@ -2,9 +2,6 @@
 
 A modern, AI-powered analytics dashboard for digital marketing agencies. Built with Next.js, shadcn/ui, Tailwind CSS, and framer-motion.
 
-## 🚀 Live Demo
-[View on Vercel]([(https://admy-brand-insight.vercel.app/)]) <!-- Replace with your actual deployed URL -->
-
 ---
 
 ## ✨ Features
