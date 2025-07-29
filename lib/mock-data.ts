@@ -1,5 +1,10 @@
 import { MetricData, ChartDataPoint, CampaignData } from './types';
 import { DollarSign, Users, TrendingUp, Percent } from 'lucide-react';
+// Type assertion to fix Lucide icon type compatibility
+const DollarSignIcon = DollarSign as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const UsersIcon = Users as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const TrendingUpIcon = TrendingUp as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const PercentIcon = Percent as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 export const mockMetrics: MetricData[] = [
   {
@@ -7,7 +12,7 @@ export const mockMetrics: MetricData[] = [
     value: '$45,231.89',
     change: 20.1,
     changeType: 'increase',
-    icon: DollarSign,
+    icon: DollarSignIcon,
     description: 'Monthly recurring revenue'
   },
   {
@@ -15,7 +20,7 @@ export const mockMetrics: MetricData[] = [
     value: '2,350',
     change: 180,
     changeType: 'increase',
-    icon: Users,
+    icon: UsersIcon,
     description: 'Active users this month'
   },
   {
@@ -23,7 +28,7 @@ export const mockMetrics: MetricData[] = [
     value: '12.5%',
     change: -2.5,
     changeType: 'decrease',
-    icon: Percent,
+    icon: PercentIcon,
     description: 'Average conversion rate'
   },
   {
@@ -31,7 +36,7 @@ export const mockMetrics: MetricData[] = [
     value: '23.8%',
     change: 4.3,
     changeType: 'increase',
-    icon: TrendingUp,
+    icon: TrendingUpIcon,
     description: 'Month-over-month growth'
   }
 ];

@@ -3,7 +3,7 @@ export interface MetricData {
   value: string;
   change: number;
   changeType: 'increase' | 'decrease';
-  icon: React.ComponentType;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   description: string;
 }
 
