@@ -44,7 +44,7 @@ A modern, AI-powered analytics dashboard for digital marketing agencies. Built w
 ## 🤖 AI Usage Report
 
 **AI Tools Used**
-- GitHub Copilot, ChatGPT
+- GitHub Copilot, ChatGPT, Bolt.new
 - Used for: Generating React/Next.js components, UI/UX polish, animation logic, code review, and documentation.
 
 **Sample Prompts**
