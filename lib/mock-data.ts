@@ -37,18 +37,18 @@ export const mockMetrics: MetricData[] = [
 ];
 
 export const revenueData: ChartDataPoint[] = [
-  { name: 'Jan', revenue: 4000, users: 240 },
-  { name: 'Feb', revenue: 3000, users: 139 },
-  { name: 'Mar', revenue: 2000, users: 980 },
-  { name: 'Apr', revenue: 2780, users: 390 },
-  { name: 'May', revenue: 1890, users: 480 },
-  { name: 'Jun', revenue: 2390, users: 380 },
-  { name: 'Jul', revenue: 3490, users: 430 },
-  { name: 'Aug', revenue: 4200, users: 520 },
-  { name: 'Sep', revenue: 3800, users: 480 },
-  { name: 'Oct', revenue: 4500, users: 590 },
-  { name: 'Nov', revenue: 4800, users: 620 },
-  { name: 'Dec', revenue: 5200, users: 680 }
+  { name: 'Jan', revenue: 4000, users: 240, value: 4000 },
+  { name: 'Feb', revenue: 3000, users: 139, value: 3000 },
+  { name: 'Mar', revenue: 2000, users: 980, value: 2000 },
+  { name: 'Apr', revenue: 2780, users: 390, value: 2780 },
+  { name: 'May', revenue: 1890, users: 480, value: 1890 },
+  { name: 'Jun', revenue: 2390, users: 380, value: 2390 },
+  { name: 'Jul', revenue: 3490, users: 430, value: 3490 },
+  { name: 'Aug', revenue: 4200, users: 520, value: 4200 },
+  { name: 'Sep', revenue: 3800, users: 480, value: 3800 },
+  { name: 'Oct', revenue: 4500, users: 590, value: 4500 },
+  { name: 'Nov', revenue: 4800, users: 620, value: 4800 },
+  { name: 'Dec', revenue: 5200, users: 680, value: 5200 }
 ];
 
 export const campaignPerformanceData: ChartDataPoint[] = [

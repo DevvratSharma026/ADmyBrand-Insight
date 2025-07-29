@@ -29,6 +29,38 @@ export function DashboardSkeleton() {
         ))}
       </div>
 
+      {/* Smart Insights Skeleton */}
+      <Card className="glass-card border-0 shadow-2xl">
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Skeleton className="h-12 w-12 rounded-xl glass-card" />
+              <div className="space-y-2">
+                <Skeleton className="h-8 w-40 glass-card" />
+                <Skeleton className="h-5 w-56 glass-card" />
+              </div>
+            </div>
+            <Skeleton className="h-12 w-32 glass-card" />
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="p-4 rounded-xl glass-card border-0">
+                <div className="flex items-start space-x-3">
+                  <Skeleton className="h-8 w-8 rounded-lg glass-card" />
+                  <div className="flex-1 space-y-2">
+                    <Skeleton className="h-4 w-32 glass-card" />
+                    <Skeleton className="h-3 w-full glass-card" />
+                    <Skeleton className="h-3 w-3/4 glass-card" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Charts */}
       <div className="grid gap-8 md:grid-cols-2">
         <Card className="glass-card border-0 shadow-2xl">

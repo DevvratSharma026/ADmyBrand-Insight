@@ -69,7 +69,7 @@ export function CampaignChart() {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '12px',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
-                  color: 'hsl(var(--foreground))',
+                  color: '#22292f', // dark gray for better contrast
                 }}
               />
               <Legend 

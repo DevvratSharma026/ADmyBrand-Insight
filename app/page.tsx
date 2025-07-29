@@ -9,6 +9,7 @@ import { CampaignChart } from '@/components/charts/campaign-chart';
 import { TrafficSources } from '@/components/charts/traffic-sources';
 import { DataTable } from '@/components/data-table/data-table';
 import { columns } from '@/components/data-table/columns';
+import { SmartInsights } from '@/components/dashboard/smart-insights';
 import { ThemeToggle } from '@/components/dashboard/theme-toggle';
 import { DashboardSkeleton } from '@/components/dashboard/dashboard-skeleton';
 import { mockCampaigns } from '@/lib/mock-data';
@@ -72,6 +73,9 @@ export default function Dashboard() {
 
       {/* Overview Cards */}
       <OverviewCards />
+
+      {/* Smart Insights Panel */}
+      <SmartInsights />
 
       {/* Charts Section */}
       <div className="space-y-12">
