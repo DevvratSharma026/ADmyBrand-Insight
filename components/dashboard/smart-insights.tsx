@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Brain, RefreshCw, Sparkles } from 'lucide-react';
 import { generateInsights, getRandomInsights, type Insight } from '@/lib/insights-generator';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 export function SmartInsights() {
   const [insights, setInsights] = useState<Insight[]>(generateInsights());
@@ -119,7 +120,7 @@ export function SmartInsights() {
                       "p-2 rounded-lg transition-all duration-300 group-hover/insight:scale-110",
                       getIconStyles(insight.type)
                     )}>
-                      <insight.icon className="h-4 w-4" />
+                      {React.createElement(insight.icon, { className: 'h-4 w-4' })}
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-sm text-foreground/90 mb-1 group-hover/insight:text-foreground transition-colors duration-300">
